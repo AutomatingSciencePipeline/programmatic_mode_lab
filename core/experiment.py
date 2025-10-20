@@ -2,13 +2,12 @@ from multiprocessing import Pool
 from core.util.data import preprocess_ranges
 import itertools, os
 import pandas as pd
-from typing import Dict, Any
 
 class Experiment:
     def __init__(self, 
-                 hyperparams: Dict[str:Any], 
-                 save_path:str='./', 
-                 csv_name:str='output.csv'):
+                 hyperparams, 
+                 save_path='./', 
+                 csv_name='output.csv'):
         
         self.hyperparams = hyperparams
         self.save_path = save_path

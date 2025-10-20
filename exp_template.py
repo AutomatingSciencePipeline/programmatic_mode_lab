@@ -1,5 +1,4 @@
 from core.experiment import Experiment
-from typing import Dict, Any
 
 class MyExperiment(Experiment):
     def __init__(self):
@@ -12,12 +11,12 @@ class MyExperiment(Experiment):
                          csv_name="output.csv")
     
 
-    def process_trial(self, data : Dict[str:Any]) -> Dict[str:Any]:
+    def process_trial(self, data):
         # your defined function here
         # e.g. compute f(x, y, z)
         pass
     
-    def graph_result(self, data : Dict[str:Any], save_path : str) -> None:
+    def graph_result(self, data, save_path):
         # your defined graph function here
         pass
 

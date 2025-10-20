@@ -12,6 +12,14 @@ At the end of this lab, you will be able to utilize the given experiment templat
 
 ```python 
 python3 -m venv my_env
+source venv/bin/activate
+```
+
+#### [⭐] For windows users, run the following command instead:
+
+```python 
+python -m venv my_env
+.\my_env\Scripts\activate 
 ```
 
 #### 2. To download all necessary requirements to run this lab, run the following command:
@@ -24,7 +32,7 @@ pip install -r requirements.txt
 To learn how to start your own experiment, we will implement the function: `y = mx + b`.
 
 ### 1. Copy from the template
-You are provided with the template file `exp_template.py`. Make a new file called `my_slope_exp.py` in the root directory.
+You are provided with the template file `exp_template.py`. Make a new file called `my_slope_exp.py` in the root directory. Copy the contents of `exp_template.py` into `my_slope_exp.py`.
 
 ### 2. Declare Hyperparameters
 Hyperparameters are defined using a dictionary of `string` to `tuple`, where the *tuple* defines the start, stop, and step of the variable. For our implementation of `y = mx + b`, we will declare our hyperparameter as:
@@ -60,10 +68,9 @@ The `process_trial()` method takes in `data`, which is a dictionary and outputs 
 ```python
 
     def process_trial(self, data):
-        y = (data["m"] * data.get("x")) + data.get("b")
+        y = (data["m"] * data["x"]) + data["b"]
 
         return {"y" : y}
-
 ```
 
 The snippet above define the variable  `y` to be equals to `(m * x) + b`, and returns y as a result entry. You can collect more results if needed for your experiment as long as `process_trial()` returns a dictionary of String to Any.
@@ -113,4 +120,10 @@ import matplotlib.pyplot as plt
 ### 5. Run your experiment
 ```python
     python3 my_slope_exp.py
+```
+
+#### [⭐] For windows users, run the following command instead:
+
+```python
+    python my_slope_exp.py
 ```
