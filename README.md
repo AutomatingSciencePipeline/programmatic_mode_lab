@@ -10,21 +10,21 @@ At the end of this lab, you will be able to utilize the given experiment templat
 
 #### 1. To activate the virtual environment, my_evn, run the following command:
 
-```python 
+```sh
 python3 -m venv my_env
 source venv/bin/activate
 ```
 
 #### [⭐] For windows users, run the following command instead:
 
-```python 
+```sh
 python -m venv my_env
 .\my_env\Scripts\activate 
 ```
 
 #### 2. To download all necessary requirements to run this lab, run the following command:
 
-```python 
+```bash
 pip install -r requirements.txt
 ```
 
@@ -116,14 +116,16 @@ import matplotlib.pyplot as plt
         
     plt.show()
 ```
+> [🧐] Note that the function also provides you with the variable `save_path`, which you can use to save your graph.
+> This is for when you are submiting your code files to GLADOS and would like the system to produce a graph alongside a csv detailing the results
 
 ### 5. Run your experiment
-```python
+```bash
     python3 my_slope_exp.py
 ```
 
 #### [⭐] For windows users, run the following command instead:
 
-```python
+```bash
     python my_slope_exp.py
 ```
