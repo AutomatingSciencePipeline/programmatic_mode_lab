@@ -12,7 +12,7 @@ At the end of this lab, you will be able to utilize the given experiment templat
 
 ```sh
 python3 -m venv my_env
-source venv/bin/activate
+source my_env/bin/activate
 ```
 
 #### [⭐] For windows users, run the following command instead:
